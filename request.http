@@ -1,0 +1,44 @@
+###
+POST http://localhost:3000/api/v1/personas/persona HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Juana",
+    "lastname": "Lopez",
+    "mom":[{
+            "nameMom": "Flor Maria",
+            "namepets_mom":["Lucas", "Marquitos" ,"Josecito"]
+        }],
+    "dad":[{
+        "jobs":
+        [{
+            "mainjob": "Student",
+            "alternatejob": "Teacher"
+        }]
+    }]
+}
+
+###
+GET http://localhost:3000/api/v1/personas HTTP/1.1
+
+###
+GET http://localhost:3000/api/v1/personas/Student  HTTP/1.1
+
+
+###
+PUT http://localhost:3000/api/v1/personas/623340a8faa2410240e9d103 HTTP/1.1
+Content-Type: application/json
+
+{
+    "dad": {
+        "jobs": {
+          "mainjob": "No se sabe",
+          "alternatejob": "sin info"
+        }
+    }
+}
+
+
+
+###
+DELETE  http://localhost:3000/api/v1/personas/62333c70fa2f71297aec5d11 HTTP/1.1
